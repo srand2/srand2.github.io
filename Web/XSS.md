@@ -32,4 +32,6 @@ At this point we can run javascript inside the event
 ![Run Javascript](/docs/assets/images/Pasted%20image%2020210917232030.png)
 
 
-<iframe width="700" height="400" src="https://www.youtube.com/embed/EoaDgUgS6QA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EoaDgUgS6QA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
