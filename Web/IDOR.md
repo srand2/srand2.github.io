@@ -1,46 +1,46 @@
 
 # IDOR
 
-![[Pasted image 20210901195610.png]]
+![[Pasted image 20210901195610.png]]![Event Handlers](/docs/assets/images/20210901195610.png)
 
 Insecure Direct Object Reference refers to an object that is exposed to anyone who requests it **directly**
 
-![[Pasted image 20210901200022.png]]
+![[Pasted image 20210901200022.png]]![Event Handlers](/docs/assets/images/20210901200022.png)
 
-![[Pasted image 20211125110655.png]]
+![[Pasted image 20211125110655.png]]![Event Handlers](/docs/assets/images/20211125110655.png)
 
-![[Pasted image 20211125110731.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211125110731.png)
 
 In our first example, whats stopping someone from checking another users ID and getting all their information?
 
-![[Pasted image 20210901200131.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901200131.png)
 
 This code example demonstrates how this can occur.
 
-![[Pasted image 20210901200314.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901200314.png)
 
 The server is taking in the users id and directly displaying that information.
 
 To fix this the server shouldnt believe the user, but rather extract the session ID and check on the backend.
 
-![[Pasted image 20210901200459.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901200459.png)
 
 In case of Serverless checks, the application must have a mechanism to check a signature (JWT)
 
-![[Pasted image 20210901200557.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901200557.png)
 
 ## Forced Browsing
 
 Similar to IDOR, forced browsing can occur if the application exposes a direct reference to a file location
 
-![[Pasted image 20210901200849.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901200849.png)
 
 Here an attacker can visit the link and retrieve the image even though it is a private image
 
 
 ## UUID 
 
-![[Pasted image 20210901201023.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901201023.png)
 
 Consider the server accepts arbitrary uuid's from the user, yet the uuid is too long and random to guess. What can an attacker perform?
 
@@ -50,23 +50,23 @@ One option is to try and find a location the uuid gets leaked.
 
 if you face an encoded value, you can test the idor vulnerability with decoding the encoded value. if you face a hashed value, you should test whether the hash value is an accessible or predictable value.
 
-![[Pasted image 20211207105115.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211207105115.png)
 
 Looking at the user id of “8f14e45fceea167a5a36dedd4bea2543” you might think it's a random id that's impossible to guess but that may not be the case. It's common practice to hash user ids before storing them in a database so maybe that's what's happening here.
 
-![[Pasted image 20211207105204.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211207105204.png)
 
 As you can see above this is a MD5 hash of the number 7. If an attacker were to take an MD5 Hash of the number “11” they would be able to craft a user id for that user.
 
-![[Pasted image 20211207105219.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211207105219.png)
 
 Now that we generated an MD5 hash for the integer 11 we can use this to retrieve information from that person's user account.
 
-![[Pasted image 20211207105239.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211207105239.png)
 
 (bugbountyplaybook2)
 
-![[Pasted image 20220117111509.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020220117111509.png)
 
 
 ## Bypassing Validation 
@@ -158,11 +158,11 @@ The basic way to test for BOLA is to guess the random ID of the object, but this
 
 ## How to Test - In Pictures
 
-![[Pasted image 20211125111427.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211125111427.png)
 
-![[Pasted image 20211125111438.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211125111438.png)
 
-![[Pasted image 20211125111524.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211125111524.png)
 
 
 ## Autorize 
@@ -211,7 +211,7 @@ _**Modified Response**_ correspond to the server response to our **[victim**] re
 **_Unauthenticated Response_** is the server response to the request but without any auth cookie.
 
 By using this plugin, you should have a better chance of finding _IDOR_ and _Improper Access Control_ vulnerabilities. Moreover, it allows you to automate some queries and focus on the interesting ones.
-![[Pasted image 20211125111653.png]]
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211125111653.png)
 
 
 ## Resources
