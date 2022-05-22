@@ -1,13 +1,13 @@
 
 # IDOR
 
-![[Pasted image 20210901195610.png]]![Event Handlers](/docs/assets/images/20210901195610.png)
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901195610.png)
 
 Insecure Direct Object Reference refers to an object that is exposed to anyone who requests it **directly**
 
-![[Pasted image 20210901200022.png]]![Event Handlers](/docs/assets/images/20210901200022.png)
+![Event Handlers](/docs/assets/images/Pasted%20image%2020210901200022.png)
 
-![[Pasted image 20211125110655.png]]![Event Handlers](/docs/assets/images/20211125110655.png)
+![Event Handlers](/docs/assets/images/Pasted%20image%2020211125110655.png)
 
 ![Event Handlers](/docs/assets/images/Pasted%20image%2020211125110731.png)
 
